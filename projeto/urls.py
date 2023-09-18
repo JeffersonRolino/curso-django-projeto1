@@ -23,7 +23,17 @@ def my_view(request):
     return HttpResponse("Uma linda String...")
 
 
+def home(request):
+    return HttpResponse("Seja Bem vindo!")
+
+
+def contato(request):
+    return HttpResponse("Contato...")
+
+
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path("", home),
     path("sobre/", my_view),
+    path("contato/", contato),
 ]
